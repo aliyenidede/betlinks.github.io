@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--animate css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!--font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!--owl-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--jquery-->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+  <!--css-->
+  <style>
+    body,
+    html {
+      box-sizing: border-box;
+      background-color: #2c2f31 !important;
+      scroll-behavior: smooth;
+      font-size: 12px;
+      padding-top: 60px;
+
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--badge-gray);
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: none;
+      outline: none;
+      color: var(--badge-gray);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      line-height: 1.1;
+      text-transform: capitalize;
+      font-weight: 400;
+      color: #191919;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 a,
+    h2 a,
+    h3 a,
+    h4 a,
+    h5 a,
+    h6 a {
+      color: #191919;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+
+    h1 a:hover,
+    h2 a:hover,
+    h3 a:hover,
+    h4 a:hover,
+    h5 a:hover,
+    h6 a:hover {
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    input,
+    select,
+    button,
+    textarea {
+      outline: none;
+      border: none;
+      background: none;
+    }
+
+    textarea {
+      display: block;
+      width: 100%;
+      border: 2px solid #CFC7C7;
+      border-radius: 1rem;
+      padding: .5rem 1rem;
+      resize: none;
+    }
+
+    input:focus,
+    select:focus,
+    button:focus,
+    textarea:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    .mainlogo {
+      width: 120px;
+      height: 37px;
+    }
+
+    .social-links {
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
+
+    .social-button {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      padding: 10px 15px;
+      border-radius: 10px;
+      z-index: 1;
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .social-button:before {
+      border-radius: 10px;
+      content: '';
+      width: 100%;
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      z-index: -1;
+      height: 100%;
+      background: linear-gradient(180deg, transparent 0%, #00000053 100%);
+    }
+
+    .social-button i {
+      height: 16px;
+      width: 16px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .discord {
+      background: #5522FF;
+    }
+
+    .telegram {
+      background: #2277FF;
+    }
+
+    .skype {
+      background: #2244FF;
+    }
+
+    .twitch {
+      background: #3100D6;
+    }
+
+    .instagram {
+      background: #FF22BB;
+    }
+
+    .youtube {
+      background: #FF2222;
+    }
+
+    .links {
+      display: flex;
+      margin: 0px;
+      padding: 0px !important;
+      color: #fff;
+    }
+
+    .links a {
+      font-weight: bold;
+      font-size: 14px;
+      margin: 0 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--card);
+      padding: 7px 12px;
+      border-radius: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .links a:before {
+      border-radius: 10px;
+      content: '';
+      width: 100%;
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      z-index: -1;
+      height: 100%;
+      background: linear-gradient(90deg, transparent 0%, #39ff0053 100%);
+    }
+
+    .links li:nth-child(2) a:before {
+      background: linear-gradient(90deg, transparent 0%, #a66300 100%);
+    }
+
+    .links li:nth-child(3) a:before {
+      background: linear-gradient(90deg, transparent 0%, #ff000053 100%);
+    }
+
+    .links a img {
+      margin-right: 10px;
+    }
+
+    .links a small {
+      text-transform: uppercase;
+      ;
+    }
+
+    .links a p {
+      margin: 0;
+    }
+
+    .banner img {
+      object-fit: cover;
+      border-radius: 35px;
+    }
+
+    .vip {
+      color: #fff;
+    }
+
+    .vip .item {
+      background: transparent;
+      border: 2px solid var(--site-color);
+      padding: 20px;
+      margin: 10px 0;
+      border-radius: 30px;
+      display: flex;
+      overflow: hidden;
+      z-index: 1;
+      position: relative;
+      cursor: pointer;
+      flex-direction: column;
+    }
+
+    .vip .item .vip-img {
+      position: absolute;
+      right: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .vip .item:before {
+      content: '';
+      width: 100%;
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      z-index: -1;
+      height: 100%;
+      background: linear-gradient(90deg, transparent 0%, var(--site-color) 100%);
+    }
+
+    .vip .item .text {
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: bold;
+    }
+
+    .vip .item .text small {
+      font-weight: 500;
+      opacity: .5;
+    }
+
+    .vip .item .button {
+      background: var(--site-color);
+      text-align: center;
+      border-radius: 30px;
+      height: 35px;
+      font-size: 12px;
+      font-weight: bold;
+      width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5px;
+    }
+
+    .vip .item .left img {
+      object-position: left;
+      width: 135px;
+      height: 50px;
+      object-fit: contain;
+    }
+
+
+    .vip .item .vip {
+      width: 70px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      color: var(--site-color);
+      font-weight: bold;
+      right: 20px;
+      top: 25px;
+      position: absolute;
+    }
+
+    .vip .item svg {
+      width: 16px;
+      height: 16px;
+      position: relative;
+      top: -1px;
+      margin-right: 3px;
+    }
+
+    .vip .item path {
+      fill: var(--site-color);
+    }
+
+    .product-brand-image {
+      height: 5rem;
+      max-width: 15rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .product-brand {
+      border-style: solid;
+      border-radius: 2rem;
+      border-color: #212529;
+      background-color: #938f8f53;
+    }
+
+
+    .diamond .item {
+      background: var(--card);
+      border: 2px solid var(--site-color);
+      padding: 20px 30px;
+      margin: 10px 0;
+      border-radius: 30px;
+      display: flex;
+      overflow: hidden;
+      z-index: 1;
+      position: relative;
+      cursor: pointer;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff
+    }
+
+    .diamond .item:before {
+      content: '';
+      width: 100%;
+      position: absolute;
+      right: -50%;
+      bottom: 0px;
+      z-index: -1;
+      height: 100%;
+      background: linear-gradient(90deg, transparent 0%, var(--site-color) 100%);
+    }
+
+    .diamond .item .content {
+      display: flex;
+      align-items: center;
+    }
+
+    .diamond .item .content .icon {
+      padding-right: 2rem;
+    }
+
+    .diamond .item .content .left img {
+      padding-bottom: 1rem;
+      max-width: 15rem;
+      max-height: 5rem;
+    }
+
+    .diamond .item .button {
+      background: var(--site-color);
+      text-align: center;
+      border-radius: 30px;
+      height: 45px;
+      font-size: 14px;
+      font-weight: bold;
+      width: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5px;
+    }
+
+    .diamond .item .text {
+      text-transform: uppercase;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .row .normal .col {
+      width: 14.285714285714286% !important;
+    }
+
+    .normal .item {
+      background: var(--card);
+      border: 2px solid var(--site-color);
+      padding: 15px;
+      padding-top: 5px;
+      height: 170px;
+      margin: 10px 0;
+      cursor: pointer;
+      border-radius: 30px;
+      display: flex;
+      overflow: hidden;
+      z-index: 1;
+      position: relative;
+      flex-direction: column;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+
+    .normal .item:before {
+      content: '';
+      width: 100%;
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      z-index: -1;
+      height: 100%;
+      background: linear-gradient(181deg, transparent 0%, #191a1b 100%);
+    }
+
+    .normal .item .text span {
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    .normal .item .text {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 600;
+      height: 45px;
+      color: #ffffffa6;
+    }
+
+    .normal .item .button {
+      background: var(--site-color);
+      text-align: center;
+      font-size: 12px;
+      border-radius: 30px;
+      height: 35px;
+      font-weight: bold;
+      width: 100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5px;
+      color: #fff;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .normal .item .top img {
+      width: 10rem;
+      height: 5rem;
+      object-fit: contain;
+      object-position: left;
+    }
+
+    .bosluk {
+      height: 1000000000px;
+    }
+
+    .footer {
+      margin-top: 20px;
+      display: flex;
+      padding: 0 10px;
+      width: 100%;
+      justify-content: space-between;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .footer .licence {
+      display: flex;
+      font-size: 11px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer .cpyrght {
+      display: flex;
+      font-size: 11px;
+      opacity: 0.5;
+      color: #fff;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .fix-side {
+      position: fixed;
+      width: 200px;
+      background: var(--card);
+      height: 80%;
+      top: 0px;
+      bottom: 0;
+      transform: translateY(-50%);
+      top: 50%;
+      margin-top: 20px;
+      border-radius: 30px;
+      display: flex;
+      z-index: 999;
+      align-items: center;
+      justify-self: center;
+      border: 1px solid var(--site-color);
+      color: #fff;
+    }
+
+    .fix-side:before {
+      border-radius: 30px;
+      content: '';
+      width: 100%;
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      z-index: -1;
+      height: 50%;
+      background: linear-gradient(180deg, transparent 0%, #00000053 100%);
+    }
+
+    .fix-side.left {
+      left: 20px;
+    }
+
+    .fix-side.right {
+      right: 20px;
+    }
+
+    .fix-side .bottom img,
+    .fix-side .top img {
+      width: 120px;
+    }
+
+    .fix-side .top {
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .fix-side .bottom {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .fix-side .vip {
+      width: 70px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      color: var(--site-color);
+      font-weight: bold;
+    }
+
+    .fix-side .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .fix-side .center .stars img {
+      transform: rotate(0deg);
+      height: auto;
+      width: 80px;
+    }
+
+    .fix-side .center .promo {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 20px;
+      margin-bottom: 10px;
+      width: 70%;
+    }
+
+    .fix-side .center .promo span {
+      font-size: 24px;
+      color: var(--site-color);
+    }
+
+    .fix-side .center .promo p {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+
+    .fix-side .center img {
+      width: 200px;
+      transform: rotate(-90deg);
+      height: 230px;
+      object-fit: contain;
+    }
+
+    .fix-side svg {
+      width: 16px;
+      height: 16px;
+      position: relative;
+      top: -1px;
+      margin-right: 3px;
+    }
+
+    .fix-side path {
+      fill: var(--site-color);
+    }
+
+    .fix-side .button {
+      background: var(--site-color);
+      text-align: center;
+      border-radius: 30px;
+      height: 35px;
+      font-size: 14px;
+      font-weight: bold;
+      width: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5px;
+    }
+
+    @media (max-width:630px) {
+
+      body,
+      html {
+        box-sizing: border-box;
+        background-color: #2c2f31 !important;
+        scroll-behavior: smooth;
+        font-size: 12px;
+        padding-top: 80px;
+
+      }
+
+      .fix-side {
+        display: none !important;
+      }
+
+      .navbar-brand {
+        display: none !important;
+      }
+
+      .social-button i {
+        height: 10px;
+        width: 10px;
+        margin-right: 7px;
+      }
+
+      .social-button p {
+        display: none !important;
+      }
+
+      .social-button {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        padding: 10px 15px;
+        border-radius: 10px;
+        z-index: 1;
+        position: relative;
+        margin-bottom: 10px;
+      }
+
+      .links a {
+        font-size: 10px;
+      }
+
+      .vip .item .vip-img img {
+        width: 55px;
+      }
+
+      .vip .item .vip-img {
+        position: absolute;
+        right: 0px;
+        top: 58%;
+        transform: translateX(-18%);
+      }
+
+      .product-brand-image {
+        height: 5rem;
+        max-width: 12rem;
+        margin-right: 1rem;
+        display: flex;
+        align-items: center;
+      }
+
+      .diamond .item .content .icon img {
+        max-width: 5rem;
+      }
+
+      .diamond .item .content .left img {
+        padding-bottom: 1rem;
+        max-width: 8rem;
+        max-height: 5rem;
+      }
+
+      .diamond .item {
+        padding: 20px 30px;
+        margin: 10px 0;
+        display: block;
+        overflow: hidden;
+        z-index: 1;
+        position: relative;
+        cursor: pointer;
+        align-items: center;
+        justify-content: space-between;
+        color: #fff
+      }
+
+      .diamond .item .button {
+        height: 35px;
+        font-size: 12px;
+        font-weight: bold;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+      }
+
+      .banner img {
+        object-fit: contain;
+        border-radius: 0px;
+        height: auto;
+      }
+
+      .social-links {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        justify-content: center;
+      }
+
+    }
+
+    /*==== popup ====*/
+
+    #mask {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 9000;
+      background-color: #000;
+      display: none;
+    }
+
+    #boxes .window {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 9999;
+      text-align: center;
+    }
+
+    #boxes #dialog {
+      width: auto;
+      height: auto;
+      padding: 0;
+      background-color: transparent;
+    }
+
+    .close-popup p {
+      position: absolute;
+      top: -1.9rem;
+      right: 0;
+      padding: .3rem .5rem;
+      background: #000;
+      font-size: .9rem;
+      cursor: pointer;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .close-popup p:hover {
+      color: #fff;
+      background: #cc0000;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    /*==== /popup ====*/
+  </style>
+  <title>Link Sitesi</title>
+</head>
+
+<body>
+  <!-- popup -->
+  <div id="boxes">
+    <div id="dialog" class="window">
+      <div>
+        <a href="#" class="close-pop">
+          <img class="img-fluid" src="http://www.ansonika.com/allaia/img/banner_popup.png" alt="">
+        </a>
+        <div class="close-popup">
+          <p>Kapat</p>
+        </div>
+      </div>
+    </div>
+    <div id="mask">
+    </div>
+  </div>
+  <!-- popup -->
+
+  <!--nav-->
+  <nav class="navbar fixed-top bg-body-tertiary bg-dark p-4">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img class="mainlogo" src="./images/mainlogo.png" alt="">
+      </a>
+      <div class="social-links">
+        <a href="" class="social-button discord">
+          <i class="fa-brands fa-xl fa-discord"></i>
+          <p>Discord</p>
+        </a>
+        <a href="" class="social-button telegram">
+          <i class="fa-brands fa-xl fa-telegram"></i>
+          <p>Telegram</p>
+        </a>
+        <a href="" class="social-button twitch">
+          <i class="fa-brands fa-xl fa-twitch"></i>
+          <p>Twitch</p>
+        </a>
+        <a href="" class="social-button instagram">
+          <i class="fa-brands fa-xl fa-instagram"></i>
+          <p>Instagram</p>
+        </a>
+        <a href="" class="social-button youtube">
+          <i class="fa-brands fa-xl fa-youtube"></i>
+          <p>Youtube</p>
+        </a>
+        <a href="" class="social-button skype">
+          <i class="fa-brands fa-xl fa-skype"></i>
+          <p>Skype</p>
+        </a>
+      </div>
+      <ul class="links">
+        <li><a target="_blank" href="">
+            <div class="left"><img src="./images/ic-2.png" width="30"></div>
+            <div class="right">
+              <p>ETKİNLİK</p> <small>Bilet Etkinlikleri</small>
+            </div>
+          </a></li>
+        <li><a target="_blank" href="">
+            <div class="left"><img src="./images/ic-3.png" width="30"></div>
+            <div class="right">
+              <p>ETKİNLİK KANALIMIZ</p> <small>Telegram</small>
+            </div>
+          </a></li>
+        <li><a target="_blank" href="">
+            <div class="left"><img src="./images/ic-1.png" width="30"></div>
+            <div class="right">
+              <p>SOHBET KANALIMIZ</p> <small>Telegram</small>
+            </div>
+          </a></li>
+      </ul>
+    </div>
+  </nav>
+  <!--nav ends-->
+
+  <!--body-->
+  <a target="_blank" href="" class="fix-side right" style="--site-color: #D30A0A;">
+    <div class="top"><img src="./images/marsbahis.png"></div>
+    <div class="bottom"><img src="./images/marsbahis.png"></div>
+    <div class="center">
+      <div class="stars"><img src="./images/stars.png" width="100"></div>
+      <div class="logo"><img src="./images/marsbahis.png"></div>
+      <div class="promo"><span>Günlük 100 Milyon</span> <br>
+        <p>Çekim İmkanı</p>
+      </div>
+      <div class="button">Giriş Yap</div>
+    </div>
+  </a>
+
+  <a target="_blank" href="" class="fix-side left" style="--site-color: #D30A0A;">
+    <div class="top"><img src="./images/marsbahis.png"></div>
+    <div class="bottom"><img src="./images/marsbahis.png"></div>
+    <div class="center">
+      <div class="stars"><img src="./images/stars.png" width="100"></div>
+      <div class="logo"><img src="./images/marsbahis.png"></div>
+      <div class="promo"><span>Günlük 100 Milyon</span> <br>
+        <p>Çekim İmkanı</p>
+      </div>
+      <div class="button">Giriş Yap</div>
+    </div>
+  </a>
+
+  <div class="container">
+    <a href="" class="banner row">
+      <img src="./images/banner.png" alt="">
+    </a>
+
+    <div class="row vip">
+      <div class="col-6 col-xl-3">
+        <a target="_blank" href="" class="item" style="--site-color: #0AABD3;">
+          <div class="left">
+            <img src="./images/betnis.png" width="150">
+            <div class="text">
+              SINIRSIZ KAZANÇ
+              <div>
+                <small>SİZE ÖZEL PROMOSYONLAR</small>
+              </div>
+            </div>
+            <div class="button">GİRİŞ YAP</div>
+          </div>
+          <div class="vip-img">
+            <img src="./images/vip.png" width="100">
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-xl-3">
+        <a target="_blank" href="" class="item" style="--site-color: #FDAB10;">
+          <div class="left"><img src="./images/casibom.png" width="150">
+            <div class="text">
+              %20 Yatırım Bonusu
+              <div>
+                <small>SİZE ÖZEL PROMOSYONLAR</small>
+              </div>
+            </div>
+            <div class="button">GİRİŞ YAP</div>
+          </div>
+          <div class="vip-img">
+            <img src="./images/vip.png" width="100">
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-xl-3">
+        <a target="_blank" href="" class="item" style="--site-color: #B51081;">
+          <div class="left">
+            <img src="./images/lgbahis.png" width="150">
+            <div class="text">
+              %100 Casino Hoşgeldin
+              <div>
+                <small>SİZE ÖZEL PROMOSYONLAR</small>
+              </div>
+            </div>
+            <div class="button">GİRİŞ YAP</div>
+          </div>
+          <div class="vip-img">
+            <img src="./images/vip.png" width="100">
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-xl-3">
+        <a target="_blank" href="" class="item" style="--site-color: #E9874A;">
+          <div class="left">
+            <img src="./images/betbox.png" width="150">
+            <div class="text">
+              %30 Çevrimli Yatırım Bonusu
+              <div>
+                <small>SİZE ÖZEL PROMOSYONLAR</small>
+              </div>
+            </div>
+            <div class="button">GİRİŞ YAP</div>
+          </div>
+          <div class="vip-img">
+            <img src="./images/vip.png" width="100">
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="product-brand row mx-auto py-3 bg-gray">
+      <div class="container">
+        <div class="product-brand-owl owl-carousel owl-theme">
+          <div class="product-brand-owl__item">
+            <div class="product-brand-image">
+              <img class="img-fluid" src="./images/alfabahis.png" alt="">
+            </div>
+          </div>
+          <div class="product-brand-owl__item">
+            <div class="product-brand-image">
+              <img class="img-fluid" src="./images/bahisbudur.png" alt="">
+            </div>
+          </div>
+          <div class="product-brand-owl__item">
+            <div class="product-brand-image">
+              <img class="img-fluid" src="./images/bayspin.png" alt="">
+            </div>
+          </div>
+          <div class="product-brand-owl__item">
+            <div class="product-brand-image">
+              <img class="img-fluid" src="./images/baywin.png" alt="">
+            </div>
+          </div>
+          <div class="product-brand-owl__item">
+            <div class="product-brand-image">
+              <img class="img-fluid" src="./images/betbox.png" alt="">
+            </div>
+          </div>
+          <div class="product-brand-owl__item">
+            <div class="product-brand-image">
+              <img class="img-fluid" src="./images/betine.png" alt="">
+            </div>
+          </div>
+          <div class="product-brand-owl__item">
+            <div class="product-brand-image">
+              <img class="img-fluid" src="./images/betist.png" alt="">
+            </div>
+          </div>
+          <div class="product-brand-owl__item">
+            <div class="product-brand-image">
+              <img class="img-fluid" src="./images/almabet.png" alt="">
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row diamond">
+      <div class="col">
+        <a target="_blank" href="" class="item" style="--site-color: #F88F0F;">
+          <div class="content">
+            <div class="icon">
+              <img src="./images/diamond.png" width="100">
+            </div>
+            <div class="left">
+              <img src="./images/maritbet.png" width="150">
+              <div class="text">
+                %200 Hoşgeldin Bonusu
+                <div>
+                  <small>SİZE ÖZEL PROMOSYONLAR</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="button">GİRİŞ YAP</div>
+        </a>
+      </div>
+      <div class="col"><a target="_blank" href="" class="item" style="--site-color: #AA9832;">
+          <div class="content">
+            <div class="icon">
+              <img src="./images/diamond.png" width="100">
+            </div>
+            <div class="left">
+              <img src="./images/norabahis.png" width="150">
+              <div class="text">
+                Kuralsız Kayıp ve Yatırım Bonusu
+                <div>
+                  <small>SİZE ÖZEL PROMOSYONLAR</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="button">GİRİŞ YAP</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="row normal">
+      <div class="col-6 col-sm-2">
+        <a target="_blank" href="" class="item" style="--site-color: #91C64F;">
+          <div class="top">
+            <img src="./images/betpuan.png" width="150">
+          </div>
+          <div class="text">
+            <span>88 FS</span> <br> Deneme Bonusu
+          </div>
+          <div class="button">GİRİŞ YAP</div>
+        </a>
+      </div>
+      <div class="col-6 col-sm-2">
+        <a target="_blank" href="" class="item" style="--site-color: #91C64F;">
+          <div class="top">
+            <img src="./images/betpuan.png" width="150">
+          </div>
+          <div class="text">
+            <span>88 FS</span> <br> Deneme Bonusu
+          </div>
+          <div class="button">GİRİŞ YAP</div>
+        </a>
+      </div>
+      <div class="col-6 col-sm-2">
+        <a target="_blank" href="" class="item" style="--site-color: #91C64F;">
+          <div class="top">
+            <img src="./images/betpuan.png" width="150">
+          </div>
+          <div class="text">
+            <span>88 FS</span> <br> Deneme Bonusu
+          </div>
+          <div class="button">GİRİŞ YAP</div>
+        </a>
+      </div>
+      <div class="col-6 col-sm-2">
+        <a target="_blank" href="" class="item" style="--site-color: #91C64F;">
+          <div class="top">
+            <img src="./images/betpuan.png" width="150">
+          </div>
+          <div class="text">
+            <span>88 FS</span> <br> Deneme Bonusu
+          </div>
+          <div class="button">GİRİŞ YAP</div>
+        </a>
+      </div>
+      <div class="col-6 col-sm-2">
+        <a target="_blank" href="" class="item" style="--site-color: #91C64F;">
+          <div class="top">
+            <img src="./images/betpuan.png" width="150">
+          </div>
+          <div class="text">
+            <span>88 FS</span> <br> Deneme Bonusu
+          </div>
+          <div class="button">GİRİŞ YAP</div>
+        </a>
+      </div>
+      <div class="col-6 col-sm-2">
+        <a target="_blank" href="" class="item" style="--site-color: #91C64F;">
+          <div class="top">
+            <img src="./images/betpuan.png" width="150">
+          </div>
+          <div class="text">
+            <span>88 FS</span> <br> Deneme Bonusu
+          </div>
+          <div class="button">GİRİŞ YAP</div>
+        </a>
+      </div>
+      <div class="col-6 col-sm-2">
+        <a target="_blank" href="" class="item" style="--site-color: #91C64F;">
+          <div class="top">
+            <img src="./images/betpuan.png" width="150">
+          </div>
+          <div class="text">
+            <span>88 FS</span> <br> Deneme Bonusu
+          </div>
+          <div class="button">GİRİŞ YAP</div>
+        </a>
+      </div>
+      <div class="col-6 col-sm-2">
+        <a target="_blank" href="" class="item" style="--site-color: #91C64F;">
+          <div class="top">
+            <img src="./images/betpuan.png" width="150">
+          </div>
+          <div class="text">
+            <span>88 FS</span> <br> Deneme Bonusu
+          </div>
+          <div class="button">GİRİŞ YAP</div>
+        </a>
+      </div>
+      <div class="col-6 col-sm-2">
+        <a target="_blank" href="" class="item" style="--site-color: #91C64F;">
+          <div class="top">
+            <img src="./images/betpuan.png" width="150">
+          </div>
+          <div class="text">
+            <span>88 FS</span> <br> Deneme Bonusu
+          </div>
+          <div class="button">GİRİŞ YAP</div>
+        </a>
+      </div>
+      <div class="col-6 col-sm-2">
+        <a target="_blank" href="" class="item" style="--site-color: #91C64F;">
+          <div class="top">
+            <img src="./images/betpuan.png" width="150">
+          </div>
+          <div class="text">
+            <span>88 FS</span> <br> Deneme Bonusu
+          </div>
+          <div class="button">GİRİŞ YAP</div>
+        </a>
+      </div>
+      <div class="col-6 col-sm-2">
+        <a target="_blank" href="" class="item" style="--site-color: #91C64F;">
+          <div class="top">
+            <img src="./images/betpuan.png" width="150">
+          </div>
+          <div class="text">
+            <span>88 FS</span> <br> Deneme Bonusu
+          </div>
+          <div class="button">GİRİŞ YAP</div>
+        </a>
+      </div>
+      <div class="col-6 col-sm-2">
+        <a target="_blank" href="" class="item" style="--site-color: #91C64F;">
+          <div class="top">
+            <img src="./images/betpuan.png" width="150">
+          </div>
+          <div class="text">
+            <span>88 FS</span> <br> Deneme Bonusu
+          </div>
+          <div class="button">GİRİŞ YAP</div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!--body ends-->
+
+  <!--footer-->
+  <div class="footer container">
+    <div class="licence">
+      CEVDET tüm hakları saklıdır.
+    </div> <a target="_blank" href="https://join.skype.com/invite/BmE6B2CKZDDm" class="cpyrght">
+      This App Provided By readev
+  </div>
+  <!--footer ends-->
+
+  <script src="https://cdn.jsdelivrscriptpm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+  </script>
+  <!--js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+    integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!--/js-->
+
+  <!-- Popup Modül -->
+  <script>
+    jQuery(document).ready(function () {
+
+      var id = '#dialog';
+
+      //Get the screen height and width
+      var maskHeight = $(document).height();
+      var maskWidth = $(window).width();
+
+      //Set heigth and width to mask to fill up the whole screen
+      $('#mask').css({
+        'width': maskWidth,
+        'height': maskHeight,
+      });
+
+      //transition effect
+      $('#mask').fadeIn(500);
+      $('#mask').fadeTo("slow", 0.9);
+
+      //Get the window height and width
+      var winH = $(window).height();
+      var winW = $(window).width();
+
+      //Set the popup window to center
+      $(id).css('top', winH / 2 - $(id).height() / 2);
+      $(id).css('left', winW / 2 - $(id).width() / 2);
+
+      //transition effect
+      $(id).fadeIn(2000);
+
+      //if close button is clicked
+      $('.window .close-pop').click(function (e) {
+        //Cancel the link behavior
+        e.preventDefault();
+
+        $('#mask').hide();
+        $('.window').hide();
+      });
+
+      //if close button is clicked
+      $('.window .close-popup').click(function (e) {
+        //Cancel the link behavior
+        e.preventDefault();
+
+        $('#mask').hide();
+        $('.window').hide();
+      });
+
+      //if mask is clicked
+      $('#mask').click(function () {
+        $(this).hide();
+        $('.window').hide();
+      });
+
+    });
+  </script>
+  <!-- /Popup Modül -->
+  <script>
+    $(".product-brand-owl").owlCarousel({
+      margin: 5,
+      autoWidth: true,
+      infinite: true,
+      arrows: false,
+      dots: false,
+      loop: true,
+      autoplay: true,
+      items: 6,
+      autoplayTimeout: 700,
+      autoplayHoverPause: true
+    });
+  </script>
+
+  
+</body>
+
+</html>
